@@ -30,10 +30,15 @@
 ```javascript
 import { PackageIntentAndroid } from 'react-native-launch-intent-package';
 
+//get all available apps
+const appList = PackageIntentAndroid.getAppList();
+
 const packageName = 'com.android.settings';
+let status = false; //bool
 PackageIntentAndroid.canStartIntent(packageName, canStartIntent => {
   if (canStartIntent) {
-    PackageIntentAndroid.startIntent(packageName);
+    status = PackageIntentAndroid.startIntent(packageName);
   }
 });
+console.log(status ? 'success!' : 'failure!');
 ```
