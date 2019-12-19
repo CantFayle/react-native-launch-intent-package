@@ -21,11 +21,13 @@ public class PackageIntentModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void startIntent(String packageName) {
+    public Boolean startIntent(String packageName) {
         Intent intent = getIntent(packageName);
         if (intent != null) {
             getReactApplicationContext().startActivity(intent);
+            return true;
         }
+        return false;
     }
 
     @ReactMethod
