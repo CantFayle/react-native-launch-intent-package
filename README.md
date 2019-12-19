@@ -5,6 +5,8 @@
 
 `$ npm install react-native-launch-intent-package --save`
 
+change version to `'https://github.com/CantFayle/react-native-launch-intent-package'`
+
 ### Mostly automatic installation
 
 `$ react-native link react-native-launch-intent-package`
